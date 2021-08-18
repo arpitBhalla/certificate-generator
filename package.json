@@ -1,16 +1,18 @@
 {
   "name": "certificate",
   "version": "1.0.0",
-  "description": "Code Byte India 2021",
-  "main": "index.js",
+  "description": "Generate Certificate",
   "scripts": {
-    "start": "ts-node index.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "ts-node index.ts"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Arpit Bhalla",
+  "license": "MIT",
   "dependencies": {
     "canvas": "^2.7.0",
     "ts-node": "^9.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^16.6.1",
+    "typescript": "^4.3.5"
   }
 }

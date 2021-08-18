@@ -1,5 +1,6 @@
-const { createCanvas, loadImage } = require("canvas");
-const fs = require("fs");
+import { createCanvas, loadImage } from "canvas";
+import fs from "fs";
+
 const canvas = createCanvas(1056, 816);
 const ctx = canvas.getContext("2d");
 
@@ -16,8 +17,8 @@ const printIt = (name: string) => {
     ctx.fillText(name, 1056 / 2, 380);
 
     const buffer = canvas.toBuffer("image/png");
-    fs.writeFileSync(`./dist/${name}.png`, buffer);
+    fs.writeFileSync(`./dist/${name + Date.now()}.png`, buffer);
   });
 };
 
-["Arpit Bhalla", "Khushal"].map((e) => printIt(e));
+["Arpit Bhalla", "Khushal"].map(printIt);
